@@ -8,13 +8,13 @@ paginate: 2
 permalink: pretty
 excerpt_separator: "\n\n\n" # end excerpt with two blank lines
 
-dark: false # enables dark mode
 archive_is_homepage: true # shows archive instead of excerpts on the index page
+dark: false # enables dark mode
 
-navigation: # shows navigation in header
+navigation: # enables navigation in header
 #  - index.html
 #  - archive.html
-  - about.md
+#  - about.md
 
 favicons: # see http://fontawesome.io/icons/#brand for all possible icons
   - github: "https://github.com/niklasbuschmann/contrast"
