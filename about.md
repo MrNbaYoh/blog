@@ -1,5 +1,6 @@
 ---
 title: "About"
+categories: index
 ---
 
 ### About Me
