@@ -38,19 +38,24 @@ body
 
 {% if site.style.dark %}
 
-body > header
+body > header, body > footer
   background-color: #282828
   color: #fff
 
 {% else %}
 
-body > header
+body > header, body > footer
   background-color: #fff
-  color: #333
+  color: gray
+
+body > footer
+  border-top: 1px solid #f0f0f0
 
 {% endif %}
 
 {% else %}
+
+@import anchor
 
 body > header
   background-color: #282828
@@ -64,30 +69,14 @@ article:first-of-type
 article header a
   box-shadow: inset 0 -3px 0 #282828, inset 0 -4px 0 currentColor
 
-{% else %}
-
-article header a
-  box-shadow: inset 0 -3px 0 white, inset 0 -4px 0 currentColor
-
-{% endif %}
-
-{% endif %}
-
-@import anchor
-
-html
-  background-color: #282828
-
-article
-  border-top: 1px solid rgba(148, 148, 148, .08)
-
-{% if site.style.dark %}
-
 body > footer
   background-color: #282828
   color: #999
 
 {% else %}
+
+article header a
+  box-shadow: inset 0 -3px 0 white, inset 0 -4px 0 currentColor
 
 body > footer
   background-color: #fafafa
@@ -95,6 +84,14 @@ body > footer
   border-top: 1px solid #f0f0f0
 
 {% endif %}
+
+{% endif %}
+
+html
+  background-color: #282828
+
+article
+  border-top: 1px solid rgba(148, 148, 148, .08)
 
 {% endif %}
 
