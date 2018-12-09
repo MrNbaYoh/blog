@@ -42,20 +42,23 @@ article
 article:first-of-type
   border-top: none
 
-article header a
-  box-shadow: inset 0 -3px 0 white, inset 0 -4px 0 currentColor
-
 body > header
   background-color: #282828
   color: white
 
 {% if site.style.dark %}
 
+article header a
+  box-shadow: inset 0 -3px 0 #282828, inset 0 -4px 0 currentColor
+
 body > footer
   background-color: #282828
   color: #999
 
 {% else %}
+
+article header a
+  box-shadow: inset 0 -3px 0 white, inset 0 -4px 0 currentColor
 
 body > footer
   background-color: #fafafa
