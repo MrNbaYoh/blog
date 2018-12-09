@@ -3,7 +3,7 @@ title: "Home"
 layout: blank
 ---
 {% if site.archive_is_homepage %}
-<div>page.url</div>
+<div>{{ page.url }}</div>
 {% else %}
 <main>
   {% for page in paginator.posts %}
