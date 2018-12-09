@@ -6,7 +6,7 @@
 
 @import anchor
 
-{% if site.style.dark %}
+{% if site.dark %}
 
 body
   background: #2a2a2a
@@ -82,14 +82,16 @@ nav, body > footer
   justify-content: space-between
   align-items: baseline
 
-.archive
-  div
-    display: flex
-    align-items: baseline
-  h3
-    margin: 0.25em 0
-  time
-    color: gray
-    width: 6em
-  a
-    font-weight: 300
+.archive div
+  display: flex
+  align-items: baseline
+
+.archive h3
+  margin: 0.25em 0
+
+.archive time
+  color: gray
+  width: 6em
+
+.archive a
+  font-weight: 300
