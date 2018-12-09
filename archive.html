@@ -12,7 +12,7 @@ layout: blank
           <header><h1><a href="{{ post.date | date: '%Y' | prepend '#' }}" id="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</a></h1></header>
         {%- endif -%}
       {%- else -%}
-        <header><h1>{{ post.date | date: '%Y' }}</h1></header>
+        <header><h1><a href="{{ post.date | date: '%Y' | prepend '#' }}" id="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</a></h1></header>
       {%- endif -%}
       <li>
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
