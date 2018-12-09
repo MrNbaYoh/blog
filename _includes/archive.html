@@ -1,19 +1,12 @@
 <main class="archive">
   <article>
-    {%- for post in site.posts -%}
-      {%- if post.next -%}
-        {%- assign year = post.date | date: '%Y' -%}
-        {%- assign prev_year = post.next.date | date: '%Y' -%}
-        {%- if year != prev_year -%}
-          <header><h1><a href="#{{ post.date | date: '%Y' }}" id="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</a></h1></header>
-        {%- endif -%}
-      {%- else -%}
-        <header><h1><a href="#{{ post.date | date: '%Y' }}" id="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</a></h1></header>
-      {%- endif -%}
-      <li>
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-        <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-      </li>
+    {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+    {% for year in postsByYear %}
+    <header><h1><a href="#{{ year.name }}" id="{{ year.name }}">{{ year.name }}</a></h1></header>
+    {% for post in year.items %}
+    <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+    {%- endfor -%}
     {%- endfor -%}
   </article>
 </main>
