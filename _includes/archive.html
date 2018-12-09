@@ -4,8 +4,10 @@
     {% for year in postsByYear %}
     <header><h1><a href="#{{ year.name }}" id="{{ year.name }}">{{ year.name }}</a></h1></header>
     {% for post in year.items %}
-    <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+    <div>
+      <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+    </div>
     {%- endfor -%}
     {%- endfor -%}
   </article>
