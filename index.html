@@ -6,7 +6,8 @@ layout: blank
 <main>
   <article>
     <h1>Pages</h1>
-    {% for page in site.pages %}
+    {% for path in site.navigation %}
+    {% assign page = site.pages | where: "path", path | first %}
     <h3><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h3>
     {%- endfor -%}
     <h1>Posts</h1>
