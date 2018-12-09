@@ -4,15 +4,12 @@ layout: blank
 ---
 <main class="archive">
   <article>
-    {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-    {% for year in postsByYear %}
-    <header><h1><a href="#{{ year.name }}" id="{{ year.name }}">{{ year.name }}</a></h1></header>
-    {% for post in year.items %}
+    <h1>Posts</h1>
+    {% for post in site.posts %}
     <div>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
       <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
     </div>
-    {%- endfor -%}
     {%- endfor -%}
   </article>
 </main>
