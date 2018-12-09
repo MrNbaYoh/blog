@@ -3,15 +3,19 @@ title: "Home"
 layout: blank
 ---
 {% if site.style.compact %}
-<h1>Pages</h1>
-{% for page in site.pages %}
-<h3><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h3>
-{%- endfor -%}
-<h1>Posts</h1>
-{% for post in site.posts %}
-<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-{%- endfor -%}
+<main>
+  <article>
+    <h1>Pages</h1>
+    {% for page in site.pages %}
+    <h3><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h3>
+    {%- endfor -%}
+    <h1>Posts</h1>
+    {% for post in site.posts %}
+    <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+    {%- endfor -%}
+  </article>
+</main>
 {% else %}
 <main>
   {% for page in paginator.posts %}
