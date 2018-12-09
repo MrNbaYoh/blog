@@ -19,7 +19,7 @@ body
 {% else %}
 
 body
-  background: #fdfdfd
+  background: #fff
   color: #333
 
 {% endif %}
@@ -31,13 +31,30 @@ article, body > footer
 
 {% else %}
 
-{% if site.style.dark or site.style.compact == false %}
+{% if site.style.compact %}
+
+body
+  background: #fdfdfd
+
+{% if site.style.dark %}
+
+body > header
+  background-color: #282828
+  color: #fff
+
+{% else %}
+
+body > header
+  background-color: #fff
+  color: #333
+
+{% endif %}
+
+{% else %}
 
 body > header
   background-color: #282828
   color: white
-
-{% else %}
 
 article:first-of-type
   border-top: none
