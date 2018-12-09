@@ -26,12 +26,6 @@ body
 
 {% if site.style.minimalist or site.style.compact %}
 
-body
-  margin: 0 calc(24% - 4em)
-
-article, body > header, body > footer
-  padding: 1em 0
-
 article, body > footer
   border-top: 2px solid rgba(148, 148, 148, .12)
 
@@ -50,9 +44,6 @@ article:first-of-type
 
 article header a
   box-shadow: inset 0 -3px 0 white, inset 0 -4px 0 currentColor
-
-article, body > header, body > footer
-  padding: 1em calc(24% - 4em)
 
 body > header
   background-color: #282828
@@ -74,6 +65,9 @@ body > footer
 {% endif %}
 
 {% endif %}
+
+article, body > header, body > footer
+  padding: 1em calc(24% - 4em)
 
 header a
   color: inherit
