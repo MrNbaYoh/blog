@@ -16,12 +16,11 @@
 <header>
   {% unless site.style.compact %}<h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>{% endunless %}
   <nav>
-    <div>
-      {% if site.style.compact %}
-      <h2><a href="{{ site.baseurl }}">{{ site.title }}</a></h2>
-      {% else %}
-      {% for path in site.navigation %}{% assign node = site.pages | where: "path", path | first %}<a href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>{% endfor %}</div>
-      {% endif %}
+    {% if site.style.compact %}
+    <h2><a href="{{ site.baseurl }}">{{ site.title }}</a></h2>
+    {% else %}
+    <div>{% for path in site.navigation %}{% assign node = site.pages | where: "path", path | first %}<a href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>{% endfor %}</div>
+    {% endif %}
     <div>{% for link_hash in site.links %}{% for link in link_hash %}<a href="{{ link[1] }}"><i class="fa fa-{{ link[0] }}"></i></a>{% endfor %}{% endfor %}</div>
   </nav>
 </header>
