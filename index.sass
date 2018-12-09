@@ -92,8 +92,17 @@ article footer
 table
   width: 100%
 
+{% if site.style.compact %}
+
+nav
+  margin: -1.2em -1rem
+
+{% else %}
+
 nav
   margin: 1em -1rem
+
+{% endif %}
 
 nav a
   display: inline-block
