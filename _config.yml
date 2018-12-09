@@ -16,7 +16,7 @@ navigation: # enables navigation in header
 #  - archive.html
 #  - about.md
 
-favicons: # see http://fontawesome.io/icons/#brand for all possible icons
+icons: # see http://fontawesome.io/icons/#brand for all possible icons
   - github: "https://github.com/niklasbuschmann/contrast"
   - envelope: "mailto:niklas.buschmann@posteo.de"
   - feed: "feed.xml"
