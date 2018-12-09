@@ -14,14 +14,15 @@
 {% if site.comments.disqus and page.comments %}<script src="//{{ site.comments.disqus }}.disqus.com/embed.js" async></script>{% endif %}
 {% if site.comments.isso and page.comments %}<script data-isso="http://{{ site.comments.isso }}" src="//{{ site.comments.isso }}/js/embed.min.js"></script>{% endif %}
 <header>
-  {% unless site.style.compact %}<h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>{% endunless %}
-  <nav {% unless site.style.compact %} class="large" {% endunless %}>
-    {% if site.style.compact %}
-    <h2><a href="{{ site.baseurl }}">{{ site.title }}</a></h2>
-    {% else %}
+  {% if site.navigation %}
+  <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+  <nav class="large">
     <div>{% for path in site.navigation %}{% assign node = site.pages | where: "path", path | first %}<a href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>{% endfor %}</div>
-    {% endif %}
-    <div>{% for link_hash in site.links %}{% for link in link_hash %}<a href="{{ link[1] }}" target="_blank"><i class="fa fa-{{ link[0] }}"></i></a>{% endfor %}{% endfor %}</div>
+  {% else %}
+  <nav>
+    <h2><a href="{{ site.baseurl }}">{{ site.title }}</a></h2>
+  {% endif %}
+    <div>{% for link_hash in site.favicons %}{% for link in link_hash %}<a href="{{ link[1] }}" target="_blank"><i class="fa fa-{{ link[0] }}"></i></a>{% endfor %}{% endfor %}</div>
   </nav>
 </header>
 {{ content }}
