@@ -26,6 +26,12 @@ body
 
 {% if site.style.compact %}
 
+nav
+  margin: 0 -1rem
+
+nav h2
+  margin: 0
+
 {% if site.style.dark %}
 
 body > header, body > footer
@@ -58,6 +64,9 @@ body > header
 article:first-of-type
   border-top: none
 
+nav
+  margin: 1em -1rem
+
 {% if site.style.dark %}
 
 article header a
@@ -79,13 +88,10 @@ body > footer
 
 {% endif %}
 
-html
-  background-color: #282828
+{% endif %}
 
 article
   border-top: 1px solid rgba(148, 148, 148, .08)
-
-{% endif %}
 
 article, body > header, body > footer
   padding: 1em calc(24% - 4em)
@@ -106,18 +112,6 @@ article footer
 
 table
   width: 100%
-
-{% if site.style.compact %}
-
-nav
-  margin: -1.2em -1rem
-
-{% else %}
-
-nav
-  margin: 1em -1rem
-
-{% endif %}
 
 nav a
   display: inline-block
