@@ -7,8 +7,10 @@ layout: blank
   <article>
     <h1>Posts</h1>
     {% for post in site.posts %}
-    <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+    <div>
+      <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+    </div>
     {%- endfor -%}
   </article>
 </main>
