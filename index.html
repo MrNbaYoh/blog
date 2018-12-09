@@ -2,6 +2,9 @@
 title: "Home"
 layout: blank
 ---
+{% if site.style.compact %}
+  {% include_relative archive.html %}
+{% else %}
 <main>
   {% for page in paginator.posts %}
   <article>
@@ -22,4 +25,5 @@ layout: blank
     <span class="paginate">page {{ paginator.page }} of {{ paginator.total_pages }}</span>
     <a {% if paginator.next_page %} class="gray" href="{{ paginator.next_page_path | prepend: site.baseurl }}" {% else %} class="disabled" {% endif %}>older posts »</a>
 </footer>
+{% endif %}
 {% endif %}
