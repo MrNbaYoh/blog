@@ -9,7 +9,7 @@ layout: blank
         {%- assign year = post.date | date: '%Y' -%}
         {%- assign prev_year = post.next.date | date: '%Y' -%}
         {%- if year != prev_year -%}
-          <header><h1>{{ post.date | date: '%Y' }}</h1></header>
+          <header><h1><a href="{{ post.date | date: '%Y' | prepend '#' }}" id="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</a></h1></header>
         {%- endif -%}
       {%- else -%}
         <header><h1>{{ post.date | date: '%Y' }}</h1></header>
