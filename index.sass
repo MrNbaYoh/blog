@@ -2,13 +2,9 @@
 ---
 
 @function reduce ($percent)
-  @return rgba(mix(#292929, #fff), $percent / 100)
+  @return rgba(mix(#282828, #fff), $percent / 100)
 
-body
-  display: flex
-  font-size: calc(.6vw + .8em)
-  margin: 0
-  min-height: 100vh
+@import anchor
 
 {% if site.style.dark %}
 
@@ -38,22 +34,11 @@ body > footer
 
 {% endif %}
 
-{% if site.style.compact %}
-
-nav
-  margin: 0.2em -1rem
-
-nav h2
+body
+  display: flex
+  font-size: calc(.6vw + .8em)
   margin: 0
-
-{% else %}
-
-@import anchor
-
-nav
-  margin: 1em -1rem
-
-{% endif %}
+  min-height: 100vh
 
 article
   border-top: 1px solid rgba(148, 148, 148, .08)
@@ -77,6 +62,15 @@ article footer
 
 table
   width: 100%
+
+nav
+  margin: 0.2em -1rem
+
+nav.large
+  margin: 1em -1rem
+
+nav h2
+  margin: 0
 
 nav a
   display: inline-block
