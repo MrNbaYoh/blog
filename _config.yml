@@ -9,7 +9,7 @@ permalink: pretty
 excerpt_separator: "\n\n\n" # two blank lines
 
 style:
-  compact: true
+  compact: false
   dark: false
 
 navigation:
