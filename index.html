@@ -1,8 +1,10 @@
 ---
 title: "Home"
 layout: blank
-permalink:{% if site.archive_is_homepage %} "/home/" {% else %} "/" {% endif %}
 ---
+{% if site.archive_is_homepage %}
+{% include archive.html %}
+{% else %}
 <main>
   {% for page in paginator.posts %}
   <article>
@@ -19,8 +21,9 @@ permalink:{% if site.archive_is_homepage %} "/home/" {% else %} "/" {% endif %}
 </main>
 {% if paginator.total_pages > 1 %}
 <footer>
-    <a {% if paginator.previous_page %} class="gray" href="{{ paginator.previous_page_path | prepend: site.baseurl }}" {% else %} class="disabled" {% endif %}>« newer posts</a>
-    <span class="paginate">page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    <a {% if paginator.next_page %} class="gray" href="{{ paginator.next_page_path | prepend: site.baseurl }}" {% else %} class="disabled" {% endif %}>older posts »</a>
+  <a {% if paginator.previous_page %} class="gray" href="{{ paginator.previous_page_path | prepend: site.baseurl }}" {% else %} class="disabled" {% endif %}>« newer posts</a>
+  <span class="paginate">page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  <a {% if paginator.next_page %} class="gray" href="{{ paginator.next_page_path | prepend: site.baseurl }}" {% else %} class="disabled" {% endif %}>older posts »</a>
 </footer>
+{% endif %}
 {% endif %}
