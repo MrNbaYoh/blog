@@ -7,10 +7,10 @@ layout: blank
   <article>
     <h1>Posts</h1>
     {% for post in site.posts %}
-    <header>
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string }}</time>
+    <div>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
       <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-    </header>
+    </div>
     {%- endfor -%}
   </article>
 </main>
