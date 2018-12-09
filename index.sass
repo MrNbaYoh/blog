@@ -16,11 +16,25 @@ body
   background: #2a2a2a
   color: #fff
 
+body > header, body > footer
+  background: #282828
+
+body > footer
+  color: #999
+
 {% else %}
 
 body
-  background: #fff
+  background: #fefefe
   color: #333
+
+body > header, body > footer
+  background: #fff
+  box-shadow: 0 0 2em #f8f8f8
+
+body > footer
+  color: gray
+  border-top: 1px solid #f0f0f0
 
 {% endif %}
 
@@ -32,53 +46,12 @@ nav
 nav h2
   margin: 0
 
-{% if site.style.dark %}
-
-body > header, body > footer
-  background-color: #282828
-  color: #fff
-
-{% else %}
-
-body
-  background: #fefefe
-
-body > header
-  background-color: #fff
-  box-shadow: 0 0 2em #f8f8f8
-
-body > footer
-  background-color: #fff
-  color: gray
-  border-top: 1px solid #f0f0f0
-
-{% endif %}
-
 {% else %}
 
 @import anchor
 
-body > header
-  background-color: #282828
-  color: white
-
 nav
   margin: 1em -1rem
-
-{% if site.style.dark %}
-
-body > footer
-  background-color: #282828
-  color: #999
-
-{% else %}
-
-body > footer
-  background-color: #fafafa
-  color: gray
-  border-top: 1px solid #f0f0f0
-
-{% endif %}
 
 {% endif %}
 
