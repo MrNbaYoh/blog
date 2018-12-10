@@ -9,9 +9,9 @@ show_excerpts: true
 
 # Add navigation links to the header
 navigation:
-  - index.html
-  - archive.html
-  - about.md
+#  - index.html
+#  - archive.html
+#  - about.md
 
 # Header icons, see http://fontawesome.io/icons/ for all possible icons
 icons:
