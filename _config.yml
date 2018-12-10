@@ -5,7 +5,7 @@ description: "Really cool blog about ... something"
 # Styling
 permalink: pretty
 dark_theme: false
-show_excerpts: false
+show_excerpts: true
 
 # Add navigation links to the header
 navigation:
