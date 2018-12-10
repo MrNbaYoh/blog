@@ -1,6 +1,6 @@
 ---
+layout: post
 title:  "Example Objects"
-date:   2017-02-01 22:30:00
 categories: objects
 ---
 
