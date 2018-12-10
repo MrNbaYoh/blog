@@ -5,7 +5,6 @@ url: "https://niklasbuschmann.github.io"
 baseurl: "/contrast"
 
 # Styling
-permalink: pretty
 dark_theme: false
 
 # Add navigation links to the header
