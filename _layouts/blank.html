@@ -20,11 +20,11 @@
 {% endcapture %}
 <header>
   {% if site.navigation and site.icons %}
-  <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
+  <h1><a href="{{ site.baseurl }}">{{ site.title | escape }}</a></h1>
   <nav class="large">
   {% else %}
   <nav>
-    <h2><a href="{{ site.baseurl }}">{{ site.title }}</a></h2>
+    <h2><a href="{{ site.baseurl }}">{{ site.title | escape }}</a></h2>
   {% endif %}
   {% if site.navigation %}{{ navigation }}{% endif %}
   {% if site.icons %}{{ icons }}{% endif %}
