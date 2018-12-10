@@ -43,23 +43,29 @@ body
   display: flex
   font-size: calc(1em + 0.3vw)
   min-height: 100vh
+  
+body > header, body > footer
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: baseline
+
+article, body > header, body > footer
+  padding: 1em calc(26% - 4em)
 
 body > footer
   background: reduce(6)
   color: reduce(100)
   border-top: 1px solid reduce(8)
 
-article
-  border-top: 1px solid reduce(8)
-
-article, body > header, body > footer
-  padding: 1em calc(26% - 4em)
-
 header h1
   margin: 0
 
 header a
   color: inherit
+
+article
+  border-top: 1px solid reduce(8)
 
 article header
   text-align: center
@@ -72,27 +78,21 @@ article footer
 table
   width: 100%
 
-nav
+body > header
   margin: 0 -1rem
 
-nav a
+body > header a
   display: inline-block
   margin: 0 1rem
 
-nav.fill
+.fill nav
   margin: 0.5em -1rem
 
-nav.fill h1
+.fill h1
   font-size: 1.75em
   width: 100%
   margin-top: -0.2em
   margin-bottom: 0.4em
-
-nav, body > footer
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-between
-  align-items: baseline
 
 .archive div
   display: flex
