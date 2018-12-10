@@ -2,7 +2,7 @@
 title: "Home"
 layout: blank
 ---
-{% if site.archive_is_homepage %}
+{% unless site.show_excerpts %}
 {% include archive.html %}
 {% else %}
 <main>
@@ -26,4 +26,4 @@ layout: blank
   <a {% if paginator.next_page %} class="gray" href="{{ paginator.next_page_path | prepend: site.baseurl }}" {% else %} class="disabled" {% endif %}>older posts »</a>
 </footer>
 {% endif %}
-{% endif %}
+{% endunless %}
