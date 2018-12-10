@@ -1,6 +1,6 @@
 ---
+layout: post
 title:  "Example Text"
-date:   2017-02-17 23:37:00
 categories: text
 ---
 
