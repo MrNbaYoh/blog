@@ -1,30 +1,35 @@
 title: "Blog Title"
 author: "Blog Author"
 description: "Really cool blog about ... something"
-more: "read more »"
 url: "https://niklasbuschmann.github.io"
 baseurl: "/contrast"
-paginate: 2
+
+# Styling
 permalink: pretty
-excerpt_separator: "\n\n\n" # end excerpt with two blank lines
+dark_theme: false
 
-show_excerpts: false # show excerpts on the homepage
-dark: false # enable dark mode
-
-navigation: # enable navigation in header
+# Add navigation links to the header
+navigation:
 #  - index.html
 #  - archive.html
 #  - about.md
 
-icons: # see http://fontawesome.io/icons/#brand for all possible icons
+# Header icons, see http://fontawesome.io/icons/ for all possible icons
+icons:
   - github: "https://github.com/niklasbuschmann/contrast"
   - envelope: "mailto:niklas.buschmann@posteo.de"
   - feed: "feed.xml"
 
-comments: # embed comments
+# Embed comments
+comments:
 #  disqus: "disqus-contrast"
 #  isso: "comments.mysite.org"
 
+# Pagination
+show_excerpts: false # show excerpts on the homepage
+paginate: 2 # number of articles per page
+excerpt_separator: "\n\n\n" # end excerpt after two blank lines
+more: "read more »"
+
 defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
-sass: {style: expanded}
 plugins: [jekyll-feed, jekyll-paginate]
