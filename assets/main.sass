@@ -50,20 +50,13 @@ body > header, body > footer
   justify-content: space-between
   align-items: baseline
 
-article, body > header, body > footer
-  padding: 1em calc(26% - 4em)
-
 body > footer
   background: reduce(6)
   color: reduce(100)
   border-top: 1px solid reduce(8)
 
-header h1
-  font-size: 1.5em
-  margin: 0
-
-header a
-  color: inherit
+article, body > header, body > footer
+  padding: 1em calc(26% - 4em)
 
 article
   border-top: 1px solid reduce(8)
@@ -79,6 +72,13 @@ article footer
 table
   width: 100%
 
+header h1
+  font-size: 1.5em
+  margin: 0
+
+header a
+  color: inherit
+
 body > header
   margin: 0 -1rem
 
@@ -86,14 +86,13 @@ body > header a
   display: inline-block
   margin: 0 1rem
 
-.fill nav
-  margin: 0.4em 0
-
 .fill h1
   width: 100%
   font-size: 1.75em
-  margin-top: 0.1em
-  margin-bottom: 0.3em
+
+.fill nav
+  margin-top: 1em
+  margin-bottom: 0.4em
 
 .archive div
   display: flex
