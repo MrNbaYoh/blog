@@ -8,10 +8,10 @@ layout: blank
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
     </header>
 {{ content }}
-    {% if site.comments.isso and page.comments %}
+    {% if site.comments.isso %}
     <hr><div id="isso-thread"></div>
     {% endif %}
-    {% if site.comments.disqus and page.comments %}
+    {% if site.comments.disqus %}
     <hr><div id="disqus_thread"></div>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     {% endif %}
