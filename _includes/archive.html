@@ -1,4 +1,4 @@
-<article class="archive">
+<main class="archive">
   <h1>Posts</h1>
   {% for post in site.posts %}
   <div>
@@ -6,4 +6,4 @@
     <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
   </div>
   {%- endfor -%}
-</article>
+</main>
