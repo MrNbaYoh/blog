@@ -1,6 +1,6 @@
 ---
+layout: post
 title: "Pagination works"
-date: 2017-01-01 00:30:00
 ---
 If you have `paginate` and `show_excerpts` enabled then this should be paginated.
 
