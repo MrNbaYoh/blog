@@ -1,9 +1,5 @@
 # Contrast
 
-### Note
-
-Create a `master`-branch and adjust `_config.yml` if you want to use this theme in the root folder of `yourname.github.io`.
-
 ### Default
 
 ![screenshot](https://user-images.githubusercontent.com/4943215/35478338-b502fdfa-03da-11e8-975b-469a7c30b54f.png)
@@ -15,6 +11,10 @@ Create a `master`-branch and adjust `_config.yml` if you want to use this theme 
 ### Usage
 
 Just fork the repo and adjust the `_config.yml` to use with [Github Pages](https://pages.github.com/) and your page is done ... or read more about [Jekyll](https://jekyllrb.com/).
+
+### Note
+
+Create a `master`-branch and adjust the `baseurl` property in the config if you want to use this theme in the root folder `yourname.github.io` instead of `yourname.github.io/blog/`.
 
 ### Features
 
