@@ -5,6 +5,7 @@ description: "Really cool blog about ... something"
 # Styling
 permalink: pretty
 dark_theme: false
+show_excerpts: true
 
 # Add navigation links to the header
 navigation:
@@ -24,8 +25,7 @@ comments:
 #  isso: "comments.mysite.org"
 
 # Pagination
-show_excerpts: false # show excerpts on the homepage
-paginate: 2 # number of articles per page
+paginate: 2
 excerpt_separator: "\n\n\n" # end excerpt after two blank lines
 more: "read more »"
 newer: "« newer posts"
