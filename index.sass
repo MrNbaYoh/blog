@@ -23,6 +23,18 @@ body > header, body > footer
 
 {% endif %}
 
+@media (prefers-color-scheme: dark)
+  body
+    background: #282828
+    color: #fff
+
+@media (prefers-color-scheme: light)
+  body
+    background: #fff
+    color: #333
+  body > header, body > footer
+    box-shadow: 0 0 2em #f8f8f8
+
 body
   display: flex
   font-size: calc(.6vw + .8em)
