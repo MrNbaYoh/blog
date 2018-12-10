@@ -11,22 +11,11 @@
 {% if site.icons %}<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">{% endif %}
 {% if site.comments.disqus and page.comments %}<script src="//{{ site.comments.disqus }}.disqus.com/embed.js" async></script>{% endif %}
 {% if site.comments.isso and page.comments %}<script data-isso="http://{{ site.comments.isso }}" src="//{{ site.comments.isso }}/js/embed.min.js"></script>{% endif %}
-{% capture navigation %}
-<div>{% for path in site.navigation %}{% assign node = site.pages | where: "path", path | first %}<a href="{{ node.url | relative_url }}">{{ node.title }}</a>{% endfor %}</div>
-{% endcapture %}
-{% capture icons %}
-<div>{% for link_hash in site.icons %}{% for link in link_hash %}<a href="{{ link[1] }}" target="_blank"><i class="fa fa-{{ link[0] }}"></i></a>{% endfor %}{% endfor %}</div>
-{% endcapture %}
 <header>
-  {% if site.navigation and site.icons %}
-  <h1><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
-  <nav class="large">
-  {% else %}
   <nav>
-    <h2><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h2>
-  {% endif %}
-  {% if site.navigation %}{{ navigation }}{% endif %}
-  {% if site.icons %}{{ icons }}{% endif %}
+    <h2 {% if site.navigation and site.icons %} class="fill" {% endif %}><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h2>
+    {% if site.navigation %}<div>{% for path in site.navigation %}{% assign node = site.pages | where: "path", path | first %}<a href="{{ node.url | relative_url }}">{{ node.title }}</a>{% endfor %}</div>{% endif %}
+    {% if site.icons %}<div>{% for link_hash in site.icons %}{% for link in link_hash %}<a href="{{ link[1] }}" target="_blank"><i class="fa fa-{{ link[0] }}"></i></a>{% endfor %}{% endfor %}</div>{% endif %}
   </nav>
 </header>
 {{ content }}
