@@ -3,7 +3,7 @@ author: "Blog Author"
 description: "Really cool blog about ... something"
 
 # Styling
-permalink: pretty
+permalink: /:title/
 dark_theme: false
 show_excerpts: true
 
