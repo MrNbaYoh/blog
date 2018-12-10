@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+<title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
 <meta charset="{{ site.encoding }}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+<meta name="author" content="{{ page.author | default: site.author | escape}}" />
+<link rel="canonical" href="{{ page.url | absolute_url }}">
 <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
-{% seo %}
-<!-- {{ page.excerpt }} -->
 {% feed_meta %}
 {% if site.icons %}<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">{% endif %}
 {% if site.comments.disqus and page.comments %}<script src="//{{ site.comments.disqus }}.disqus.com/embed.js" async></script>{% endif %}
