@@ -6,27 +6,33 @@
 
 @import anchor
 
-.dark
+=dark
   body
     background: #282828
     color: #fff
   main
     background: reduce(2)
 
-.light
+=light
   body
     background: #fff
     color: #333
   main
     background: reduce(0.5)
-  > header, > footer
+  body > header, body > footer
     box-shadow: 0 0 2em #f8f8f8
 
+{% if site.dark %}
++dark
+{% else %}
++light
+{% endif %}
+
 @media (prefers-color-scheme: dark)
-  @extend .dark
+  +dark
 
 @media (prefers-color-scheme: light)
-  @extend .light
+  +light
 
 body
   display: flex
