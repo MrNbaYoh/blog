@@ -14,7 +14,7 @@ Just fork the repo and adjust the `_config.yml` to use with [Github Pages](https
 
 ### Note
 
-Fork this as `yourname.github.io`, create a `master`-branch and adjust the `baseurl` property in the config if you want to use this theme in the root folder `yourname.github.io` instead of `yourname.github.io/blog/`.
+Fork this as `yourname.github.io` and create a `master`-branch if you want to use this theme in the root folder `yourname.github.io` instead of `yourname.github.io/blog/`.
 
 ### Features
 
