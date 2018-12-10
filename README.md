@@ -33,4 +33,4 @@ Fork this as `yourname.github.io` and create a `master`-branch if you want to us
 - [Pygments](https://github.com/richleland/pygments-css)
 - [Pixyll](https://github.com/johnotander/pixyll)
 
-Niklas Buschmann, 2014-18, MIT-License
+Niklas Buschmann, 2014-18, [public domain](http://unlicense.org/)
