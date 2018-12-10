@@ -18,17 +18,17 @@ Just fork the repo and adjust the `_config.yml` to use with [Github Pages](https
 
 ### Features
 
+ - supports dark mode in macOS Mojave
  - responsive
  - pagination
  - archive page
- - feed.xml generation
+ - feed generation
  - syntax highlighting
  - comments ([disqus](https://disqus.com/) / [isso](http://posativ.org/isso/))
 
 ### Based on
 
 - [Jekyll](https://jekyllrb.com/)
-- [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro)
 - [Font Awesome](http://fontawesome.io/)
 - [Pygments](https://github.com/richleland/pygments-css)
 - [Pixyll](https://github.com/johnotander/pixyll)
