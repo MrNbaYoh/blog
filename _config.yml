@@ -33,5 +33,4 @@ older: "older posts »"
 
 plugins: 
  - jekyll-feed
- - jekyll-seo-tag
  - jekyll-paginate
