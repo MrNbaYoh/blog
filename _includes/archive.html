@@ -1,5 +1,5 @@
 <article class="archive">
-  <h1>Posts</h1>
+  <h1 id="posts"><a href="#posts">Posts</a></h1>
   {% for post in site.posts %}
   <div>
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
