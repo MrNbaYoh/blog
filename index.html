@@ -17,4 +17,11 @@ title: "Home"
   {% endunless %}
 </article>
 {% endfor %}
+{% if paginator.total_pages > 1 %}
+<footer>
+  <a {% if paginator.previous_page %} class="gray" href="{{ paginator.previous_page_path | relative_url }}" {% else %} class="disabled" {% endif %}>{{ site.newer }}</a>
+  <span class="paginate">page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  <a {% if paginator.next_page %} class="gray" href="{{ paginator.next_page_path | relative_url }}" {% else %} class="disabled" {% endif %}>{{ site.older }}</a>
+</footer>
+{% endif %}
 {% endunless %}
