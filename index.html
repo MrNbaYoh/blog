@@ -9,7 +9,7 @@ title: "Home"
 <article>
   <header>
     <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
   </header>
 {{ page.excerpt }}
   {% unless page.excerpt == page.content %}
