@@ -30,6 +30,8 @@ show_excerpts: false # show excerpts on the homepage
 paginate: 2 # number of articles per page
 excerpt_separator: "\n\n\n" # end excerpt after two blank lines
 more: "read more »"
+newer: "« newer posts"
+older: "older posts »"
 
 defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
 plugins: [jekyll-feed, jekyll-paginate]
