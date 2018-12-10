@@ -1,6 +1,6 @@
 ---
+layout: post
 title:  "Lorem ipsum dolor sit amet"
-date:   2017-01-17 23:37:00
 categories: text
 ---
 
