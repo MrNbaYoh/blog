@@ -1,23 +1,25 @@
-title: "Blog Title"
-author: "Blog Author"
-description: "Really cool blog about ... something"
+title: "nba::yoh"
+author: "nba::yoh"
+description: ""
 
 # Styling
 permalink: /:title/
-dark_theme: false
+dark_theme: true
 show_excerpts: true
 
 # Add navigation links to the header
 navigation:
   - index.html
   - archive.html
-  - about.md
+#  - about.md
 
 # Header icons, see http://fontawesome.io/icons/ for all possible icons
 icons:
-  - github: "https://github.com/niklasbuschmann/contrast"
-  - envelope: "mailto:niklas.buschmann@posteo.de"
+  - github: "https://github.com/mrnbayoh"
+#  - envelope: "mailto:niklas.buschmann@posteo.de"
+  - twitter: "https://twitter.com/mrnbayoh"
   - feed: "feed.xml"
+  - twitch: "https://twitch.tv/nba_yoh"
 
 # Embed comments
 comments:
@@ -25,7 +27,7 @@ comments:
 #  isso: "comments.mysite.org"
 
 # Pagination
-paginate: 2
+paginate: 5
 excerpt_separator: "\n\n\n" # end excerpt after two blank lines
 more: "read more »"
 newer: "« newer posts"
