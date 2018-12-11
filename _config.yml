@@ -34,5 +34,3 @@ older: "older posts »"
 plugins: 
  - jekyll-feed
  - jekyll-paginate
-
-theme: jekyll-theme-cayman
