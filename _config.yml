@@ -33,6 +33,6 @@ more: "read more »"
 newer: "« newer posts"
 older: "older posts »"
 
-plugins: 
+plugins:
  - jekyll-feed
  - jekyll-paginate
